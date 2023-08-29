@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/vehiculos', function () {
-    return view('app');
+    return view('vehiculos');
 });
