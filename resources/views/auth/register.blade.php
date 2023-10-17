@@ -94,15 +94,16 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="col-md-12">
-                            <input id="username" type="text" placeholder="Ingresar nombre de usuario" class="form-control @error('username') is-invalid @enderror login-input" name="username" required autocomplete="username">
-    
-                            @error('username')
+                        <div class="col-md-12 mb-3">
+                            <input id="name" type="text" placeholder="Ingresar nombre" class="form-control @error('name') is-invalid @enderror login-input" name="name" value="{{ old('name') }}" required autocomplete="name">
+                            
+                            @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>                        
+                        </div>
+                                               
                     </div>
     
                     <div class="row mb-3">    
