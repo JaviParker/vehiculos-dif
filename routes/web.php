@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VehiculoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,13 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/vehiculos', function () {
-    return view('app');
-});
-Auth::routes();
+Route::get('/vehiculos', [VehiculoController::class, 'index'])->name('vehiculos.index');
 
+Route::get('/mantenimiento', function () {
+    return view('mantenimiento');
+})->name('mantenimiento');
+
+Auth::routes();
+Route::post('/store', [VehiculoController::class, 'store'])->name('vehiculos.store');
+Route::put('/update/{Num_serieE}', [VehiculoController::class, 'update'])->name('vehiculos.update');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

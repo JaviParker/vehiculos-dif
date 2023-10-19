@@ -1,0 +1,82 @@
+  /* Estilo para el contenedor del menú desplegable */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilo para el botón del perfil */
+.profile-button {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50%; /* Hacer el botón redondo */
+    cursor: pointer;
+}
+
+/* Estilo para la imagen en el botón */
+.profile-button img {
+    width: 60px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 60px;
+    border-radius: 50%; /* Ajusta el radio para que sea redonda */
+    object-fit: cover;  /* Para asegurarte de que la imagen encaje en el círculo */
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position:sticky;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+/* Estilo para los elementos del menú */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+/* Cambiar el color de fondo de los elementos del menú al pasar el cursor sobre ellos */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Estilo para el contenedor de la lista */
+.filter-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%; /* Ancho ajustable según tus necesidades */
+    margin: 20px auto;
+}
+
+/* Estilo para los elementos de la lista */
+.filter-item {
+    margin: 0 10px; /* Espacio entre elementos */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para los menús desplegables */
+select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
