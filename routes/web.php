@@ -27,4 +27,4 @@ Route::get('/mantenimiento', function () {
 Auth::routes();
 Route::post('/store', [VehiculoController::class, 'store'])->name('vehiculos.store');
 Route::put('/update/{Num_serieE}', [VehiculoController::class, 'update'])->name('vehiculos.update');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [VehiculoController::class, 'index'])->name('vehiculos.index');

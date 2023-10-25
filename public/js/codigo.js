@@ -1,16 +1,8 @@
-const profileButton = document.getElementById('profile-button');
-const dropdownContent = document.getElementById('dropdown-content');
-
 /////para llenar el div con los datos del vehiculo 
-profileButton.addEventListener('click', function() {
-    if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-    } else {
-        dropdownContent.style.display = 'block';
-    }
-});
+
 $(document).ready(function() {
-    $(".list-group-item").on("click", function() {
+    var items = $(".list-group-item")
+    items.on("click", function() {        
         var num_serie = $(this).data("num_serie");
         var economico = $(this).data("economico");
         var tipo = $(this).data("tipo");
@@ -51,7 +43,9 @@ $(document).ready(function() {
         document.getElementById('input-certificado').value = certificado;
         document.getElementById('input-departamento').value = departamento;
 
-        
+        //Destacar seleccionado
+        items.removeClass('active'); 
+        $(this).addClass('active');
     });
 });
 

@@ -2,10 +2,11 @@
 
 @section('content')
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-3">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{ asset('assets/logo.png')}}" alt="" style="width: 8vw; min-width: 77px; min-height: 27">
+                    <b style="color: #F61F60; font-size: 1.5rem; font-weight: bolder; margin-left: 20px; text-align: center; vertical-align: middle;">{{ __('Vehiculos') }}</b>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +35,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: #F61F60; font-weight: bold;">
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -56,8 +57,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('app')
+        <main class="py-2">
+            @yield('vehiculos')
         </main>
     </div>
 
