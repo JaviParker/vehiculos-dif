@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Proveedore
  * 
  * @property int $Proveedor_id
+ * @property int $Customer_id
  * @property string $Nombre
  * @property string $Propietario
  * @property string $RFC
@@ -32,10 +33,12 @@ class Proveedore extends Model
 	public $timestamps = false;
 
 	protected $casts = [
+		'Customer_id' => 'int',
 		'Codigo_postal' => 'int'
 	];
 
 	protected $fillable = [
+		'Customer_id',
 		'Nombre',
 		'Propietario',
 		'RFC',

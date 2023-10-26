@@ -230,8 +230,11 @@
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
+    <form method="GET"  id="form_mantenimiento">
+    @csrf
     <h5 class="card-title">Mantenimiento</h5>
-    <a href="{{ route('mantenimiento') }}" class="btn btn-primary">Go to Mantenimiento</a>
+    <button type="submit" id="btn_mantenimiento" class="btn btn-primary">Go to Mantenimiento</button>
+    </form>
   </div>
 </div>
 

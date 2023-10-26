@@ -10,6 +10,49 @@ profileButton.addEventListener('click', function() {
     }
 });
 $(document).ready(function() {
+    $(".list-group-item2").on("click", function() {
+        var mantenimientoID = $(this).data("Mantenimiento_id");
+        var tipo = $(this).data("tiposervicio");
+        var costo = $(this).data("costo");
+        var fecha = $(this).data("fecha");
+        var kilometraje = $(this).data("kilometraje");
+        var descripcion = $(this).data("descripcion");
+        var proveedor = $(this).data("proveedor");
+        var serie = $(this).data("Num_Serie");
+      
+        $("#detalle-tipo").text(tipo);
+        $("#detalle-costo").text(costo);
+        $("#detalle-fecha").text(fecha);
+        $("#detalle-kilometraje").text(kilometraje);
+        $("#detalle-descripcion").text(descripcion);
+        $("#detalle-proveedor").text(proveedor);
+
+
+        // document.getElementById('input-Num_Serie').value = num_serie;
+        // document.getElementById('input-economico').value = economico;
+        // document.getElementById('input-tipo').value = tipo;
+        // document.getElementById('input-marca').value = marca;
+        // document.getElementById('input-modelo').value = modelo;
+        // document.getElementById('input-placa').value = placa;
+        // document.getElementById('input-propietario').value = propietario;
+        // document.getElementById('input-chofer').value = chofer;
+        // document.getElementById('input-resguardo').value = resguardo;
+        // document.getElementById('input-poliza').value = poliza;
+        // document.getElementById('input-certificado').value = certificado;
+        // document.getElementById('input-departamento').value = departamento;
+
+        
+    });
+});
+/////para llenar el div con los datos del mantenimiento 
+profileButton.addEventListener('click', function() {
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+});
+$(document).ready(function() {
     $(".list-group-item").on("click", function() {
         var num_serie = $(this).data("num_serie");
         var economico = $(this).data("economico");
@@ -55,7 +98,6 @@ $(document).ready(function() {
     });
 });
 
-
 //para editar el vehiculo/////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
 const vehiculoForm = document.getElementById("vehiculo-form");
@@ -75,4 +117,25 @@ submitButton.addEventListener("click", function () {
 
     
 });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener el valor del input de mantenimiento_id
+    const btn_mantenimiento2 = document.getElementById("btn_mantenimiento")
+    const vehiculoid = document.getElementById("input-Num_Serie");
+    const mantenimientoform = document.getElementById("form_mantenimiento");
+
+
+    vehiculoid.addEventListener("input", function () {
+        // No actualices la URL en cada cambio del input
+    });
+
+    btn_mantenimiento2.addEventListener("click", function () {
+    // Redirigir a la vista de mantenimiento con el valor obtenido
+    //mantenimientoform.action = "{{ route('mantenimiento.show', '') }}/" + vehiculoid.value;
+    mantenimientoform.action = "/show/" + vehiculoid.value;
+
+    mantenimientoform.submit();
+  });
 });
