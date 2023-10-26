@@ -64,7 +64,7 @@
 }
 
 /* Estilo para los campos de entrada */
-input[type="text"] {
+.filter-list input[type="text"] {
     width: 11vw;
     padding: 5px;
     border: 1px solid #ccc;
