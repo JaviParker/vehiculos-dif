@@ -20,8 +20,8 @@ class MantenimientoController extends Controller
         $mantenimientos -> Descripcion = $request-> post('descripcionE');
     
         $mantenimientos->save();
-    
-        // return redirect()->route("vehiculos.index");
+        
+        return redirect()->route('mantenimiento.show', $mantenimientos -> Num_Serie);
         
         // return view('vehiculos', ['vehiculos' => $vehiculos]);
     
@@ -29,12 +29,12 @@ class MantenimientoController extends Controller
 
     public function show($Num_Serie)
 {
-
+    $titulo = "Mantenimiento de " . $Num_Serie;
     $proveedores = Proveedore::all();
     // Aquí puedes obtener los datos de mantenimiento para el vehículo con Num_Serie.
     $mantenimientos = Mantenimiento::where('Num_Serie', $Num_Serie)->get();
 
-    return view('mantenimiento', ['mantenimientos' => $mantenimientos, 'proveedores' => $proveedores,'Num_Serie' => $Num_Serie]);
+    return view('mantenimiento', ['mantenimientos' => $mantenimientos, 'proveedores' => $proveedores,'Num_Serie' => $Num_Serie, 'titulo' => $titulo]);
     // echo $Num_Serie;
 }
 }

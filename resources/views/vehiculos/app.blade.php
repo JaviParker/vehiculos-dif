@@ -63,7 +63,7 @@
 </nav>
 
 @yield('content2')
-
+@yield('content1')
 <script src="{{ asset('js/codigo.js') }}"></script>
 </body>
 </html>

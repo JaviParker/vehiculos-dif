@@ -33,8 +33,8 @@ class Mantenimiento extends Model
 	public $timestamps = false;
 
 	protected $casts = [
-		'Costo' => 'float',
-		'fecha' => 'datetime',
+		'Costo' => 'double',
+		'fecha' => 'date',
 		'Kilometraje' => 'int',
 		'Proveedor_id' => 'int'
 	];

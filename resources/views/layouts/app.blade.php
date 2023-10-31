@@ -4,9 +4,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-3">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     <img src="{{ asset('assets/logo.png')}}" alt="" style="width: 8vw; min-width: 77px; min-height: 27">
-                    <b style="color: #F61F60; font-size: 1.5rem; font-weight: bolder; margin-left: 20px; text-align: center; vertical-align: middle;">{{ __('Vehiculos') }}</b>
+                    <b style="color: #F61F60; font-size: 1.5rem; font-weight: bolder; margin-left: 20px; text-align: center; vertical-align: middle;">
+                        {{ $titulo }}</b>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

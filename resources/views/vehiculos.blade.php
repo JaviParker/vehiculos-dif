@@ -105,7 +105,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal para Añadir Vehículo -->
 <div class="modal fade" id="modalAgregar" tabindex="-1" role="dialog" aria-labelledby="modalAgregarLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -187,10 +186,10 @@
 <!-- list group -->
 <div class="container">
     <div class="row" style="margin-top: 10px">
-        <div class="col-3" style="border-right: 1px #757575 solid; height: 65vh;">
-            <ul class="list-group list-group-flush">
+        <div class="col-3 lista" style="border-right: 1px #757575 solid; height: 65vh; overflow-Y: scroll;">
+            <ul class="list-group list-group-flush" style="border-radius: 20px">
                 @foreach($vehiculos as $vehiculo)
-                    <li class="list-group-item" style="text-align: center;" data-num_serie="{{ $vehiculo->Num_Serie }}" data-economico="{{ $vehiculo->Economico }}" 
+                    <li class="vehiculos list-group-item" style="text-align: center;" data-num_serie="{{ $vehiculo->Num_Serie }}" data-economico="{{ $vehiculo->Economico }}" 
                     data-tipo="{{ $vehiculo->Tipo }}" data-marca="{{ $vehiculo->Marca }}" data-modelo="{{ $vehiculo->Modelo }}" 
                     data-placa="{{ $vehiculo->Placa }}" data-propietario="{{ $vehiculo->Propietario }}" data-chofer="{{ $vehiculo->Chofer }}"
                     data-resguardo="{{ $vehiculo->Resguardo }}" data-certificado="{{ $vehiculo->Certificado }}" data-departamento="{{ $vehiculo->Departamento }}" 
@@ -207,13 +206,13 @@
             </ul>
         </div>
         <div class="col-9" id="detalle-vehiculo">
-            <div class="row row-cols-5 detalles mb-4">
-                <p class="col-5">Serie: <span id="detalle-num_serie"></span></p>
-                <p class="col-4">Económico: <span id="detalle-economico"></span></p>
-                <p class="col">Tipo: <span id="detalle-tipo"></span></p>
-                <p class="col">Marca: <span id="detalle-marca"></span></p>
-                <p class="col">Modelo: <span id="detalle-modelo"></span></p>
-                <p class="col">Placa: <span id="detalle-placa"></span></p>
+            <div class="row row-cols-5 detalles mb-2">
+                <p class="col-4">Serie: <span id="detalle-num_serie"></span></p>
+                <p class="col-3">Económico: <span id="detalle-economico"></span></p>
+                <p class="col-5">Tipo: <span id="detalle-tipo"></span></p>
+                <p class="col-4">Marca: <span id="detalle-marca"></span></p>
+                <p class="col-4">Modelo: <span id="detalle-modelo"></span></p>
+                <p class="col-4">Placa: <span id="detalle-placa"></span></p>
                 <p class="col-6">Propietario: <span id="detalle-propietario"></span></p>
                 <p class="col-6">Chofer: <span id="detalle-chofer"></span></p>
                 <p class="col-6">Resguardo: <span id="detalle-resguardo"></span></p>
@@ -224,12 +223,12 @@
             <div class="row row-cols-3 justify-content-between cards-div">
                 <div class="col">
                     <!-------------------card de mantenimiento -------------------------- -->
-                    <a class="btn-a" href="{{ route('mantenimiento')}}">
+                    <a class="btn-a" id="linkToMant" href="#">
                         <img src="{{ asset('assets/mantenimiento.jpg')}}" class="card-img-top" alt="...">
                         <div class="card-overlay"></div>    
                         <p style="color: white;">Mantenimiento</p>                    
                     </a>
-                </div>
+</div>
                 <div class="col">
                     <a class="btn-a">
                         <img src="{{ asset('assets/combustible.jpg')}}" class="card-img-top" alt="...">
@@ -246,7 +245,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
 
 @endsection

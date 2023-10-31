@@ -34,9 +34,9 @@ class VehiculoController extends Controller
 }
 public function index()
 {
-    
+    $titulo = "Vehiculos";
     $vehiculos = Vehiculo::all();
-    return view('vehiculos', ['vehiculos' => $vehiculos]);
+    return view('vehiculos', ['vehiculos' => $vehiculos, 'titulo' => $titulo]);
 }
 
 public function edit($Num_Serie)
