@@ -186,7 +186,7 @@
 <!-- list group -->
 <div class="container">
     <div class="row" style="margin-top: 10px">
-        <div class="col-3 lista" style="border-right: 1px #757575 solid; height: 65vh; overflow-Y: scroll;">
+        <div class="col-3 lista" style="border-right: 1px #757575 solid; height: 65vh; overflow-Y: scroll; overflow-x: hidden;;">
             <ul class="list-group list-group-flush" style="border-radius: 20px">
                 @foreach($vehiculos as $vehiculo)
                     <li class="vehiculos list-group-item" style="text-align: center;" data-num_serie="{{ $vehiculo->Num_Serie }}" data-economico="{{ $vehiculo->Economico }}" 

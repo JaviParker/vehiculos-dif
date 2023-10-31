@@ -209,3 +209,7 @@ select, #marca, #año {
 .modal{
     height: 90vh;
 }
+
+.list-group::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento de Chrome y navegadores compatibles */
+  }
