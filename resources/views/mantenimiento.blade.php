@@ -147,7 +147,7 @@
 <!-- list group -->
 <div class="container">
     <div class="row" style="margin-top: 10px">
-        <div class="col-3" style="border-right: 1px #757575 solid; height: 65vh; overflow-Y: scroll; overflow-x: hidden;">
+        <div class="col-3" style="border-right: 1px #757575 solid; height: 65vh; overflow-Y: scroll;">
             <ul class="list-group list-group-flush" style="border-radius: 20px">
                 @foreach($mantenimientos as $mantenimiento)
                     <li class="list-group-item mantenimientos" aria-current="true" style="text-align: center;" data-Mantenimientoid="{{ $mantenimiento->Mantenimiento_id }}" data-tiposervicio="{{ $mantenimiento->Tipo_servicio }}" 
